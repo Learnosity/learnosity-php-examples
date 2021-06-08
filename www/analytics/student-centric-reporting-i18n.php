@@ -10,7 +10,6 @@ include_once 'includes/header.php';
 include_once '../lrn_config.php';
 
 use LearnositySdk\Request\Init;
-use LearnositySdk\Utils\Uuid;
 
 $language = filter_input(INPUT_GET, 'language', FILTER_SANITIZE_FULL_SPECIAL_CHARS, ['options'=>['default'=>'pt-PT']]);
 
@@ -100,7 +99,7 @@ $signedRequest = $Init->generate();
             <h2>Display Student-Centric reports (i18n support)</h2>
             <p>Learn more about individual students in an easy, in-depth fashion! Our Reports API provides embeddable, student-focused reports to provide a student with additional information and feedback or provide a teacher with a drilled down view of their student progress.
             <p>This demo uses learnosity-i18n which is a public repository, containing Learnosity internationalization language bundles.</p>
-            <p style="margin-bottom:25px;">Click a language icon to see a translation of the assessment below:</p>
+            <p style="margin-bottom:25px;">Click a language icon to see a translation of the report below:</p>
             <div>
                 <div class="language-button-container">
                     <a class="language-button <?php if ($language === 'pt-PT') { echo 'selected'; } ?>" href="/analytics/student-centric-reporting-i18n.php?language=pt-PT">
