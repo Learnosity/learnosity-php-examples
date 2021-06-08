@@ -10,7 +10,6 @@ include_once 'includes/header.php';
 include_once '../lrn_config.php';
 
 use LearnositySdk\Request\Init;
-use LearnositySdk\Utils\Uuid;
 
 $security = [
     'consumer_key' => $consumer_key,
